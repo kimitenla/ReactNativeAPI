@@ -1,0 +1,22 @@
+######## GHTK ROAD ############################
+
+GET https://degrassi-inukshuk-77219.herokuapp.com/Thong_tin_cuoc_hop HTTP/1.1
+
+
+
+
+######## GHTK ROAD ############################
+
+POST https://degrassi-inukshuk-77219.herokuapp.com/Register_cuoc_hop HTTP/1.1
+content-type: application/json
+
+{
+    "tencuochop": 123,
+                        "nhanvien": 123,
+                        "timebatdau": 123,
+                        "noidung": 123,
+                        "nguoichutri": 34534,
+                        "diadiem": 345345,
+                        "ngayhop": 34534534,
+ 
+}

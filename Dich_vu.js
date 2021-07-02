@@ -58,7 +58,33 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
         Yeu_cau.on('data', function (data) {
             Noi_dung_Nhan += data
         })
-     
+        if (url == "/update_cuoc_hop") {
+            let collection = "Thong_tin_cuoc_hop"
+            Yeu_cau.on('end', function () {
+
+                client.connect(uri => {
+                    Xu_ly_3L.update_cuoc_hop(collection, Noi_dung_Nhan, db, client).then(result => {
+                        Dap_ung.writeHead(200, { "Content-Type": "Text/json; charset=utf-8" })
+                        Dap_ung.end(JSON.stringify(result));
+                    })
+                })
+            })
+        }
+        else if (url == "/Register_cuoc_hop") {
+            let collection = "Thong_tin_cuoc_hop"
+            Yeu_cau.on('end', function () {
+
+                client.connect(uri => {
+                    Xu_ly_3L.Register_cuoc_hop(collection, Noi_dung_Nhan, db, client).then(result => {
+
+                        Dap_ung.writeHead(200, { "Content-Type": "Text/json; charset=utf-8" })
+                        Dap_ung.end(JSON.stringify(result));
+                    })
+
+                })
+            })
+
+        } 
         
 
 
