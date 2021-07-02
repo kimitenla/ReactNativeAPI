@@ -27,7 +27,7 @@ function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
 
         };
 
-        collection.find().sort({ "_id": -1 }).limit(1).toArray((err, result) => {
+        collection.find().sort({ "_id": -1 }).toArray((err, result) => {
             console.log("DDAAY LA REST")
             console.log(result)
             if (err) {
