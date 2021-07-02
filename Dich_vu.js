@@ -58,18 +58,10 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
         Yeu_cau.on('data', function (data) {
             Noi_dung_Nhan += data
         })
-        if (url == "/login") {
-            let collection = "DANH_SACH_USER"
-            Yeu_cau.on('end', function () {
+     
+        
 
-                client.connect(uri => {
-                    Xu_ly_3L.Login(collection, Noi_dung_Nhan, db, client).then(result => {
-                        Dap_ung.writeHead(200, { "Content-Type": "Text/json; charset=utf-8" })
-                        Dap_ung.end(JSON.stringify(result));
-                    })
-                })
-            })
-        } 
+        
     }
 })
 
