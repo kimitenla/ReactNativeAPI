@@ -11,8 +11,8 @@ POST https://degrassi-inukshuk-77219.herokuapp.com/Register_cuoc_hop HTTP/1.1
 content-type: application/json
 
 {
-    "tencuochop": 123,
-                        "nhanvien": 123,
+    "tencuochop": "sdcsdc",
+                        "nhanvien": 324234,
                         "timebatdau": 123,
                         "noidung": 123,
                         "nguoichutri": 34534,
