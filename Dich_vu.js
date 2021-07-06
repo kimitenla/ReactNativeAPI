@@ -1,7 +1,7 @@
-var Note_Dich_Vu = require('http');
-var Port = process.env.PORT || 5000;
 const express = require("express")
 const app = express();
+var Note_Dich_Vu = require('http');
+var Port = process.env.PORT || 5000;
 const MongoClient = require('mongodb').MongoClient;
 var Xu_ly_3L = require('./Xu_ly/Xu_ly_3L');
 var Dung_chung = require('./Xu_ly/Dung_chung');
@@ -15,10 +15,12 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
     let method = Yeu_cau.method
     let url = Yeu_cau.url
     Dap_ung.setHeader("Access-Control-Allow-Origin", '*')
-    Dap_ung.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
+    Dap_ung.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
     Dap_ung.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type')
     Dap_ung.setHeader('Access-Control-Allow-Credentials', true)
-    
+    if (Yeu_cau.method === 'OPTIONS') {
+        Dap_ung.status(200);
+    } next();
     let db = "Meeting"
 
 
