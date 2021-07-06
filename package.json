@@ -22,6 +22,5 @@
     "save": "^2.4.0",
     "strtotime": "^1.0.0",
     "xlsx": "^0.16.2"
-  },
-  "proxy": "http://localhost:3000"
+  }
 }

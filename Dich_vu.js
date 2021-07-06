@@ -54,8 +54,6 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
 
 
 
-
-
     else {
 
         var Noi_dung_Nhan = '';
