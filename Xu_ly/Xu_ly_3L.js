@@ -26,23 +26,23 @@ function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
             "Noi_dung": false,
 
         };
-        console.log("chua chay dc")
-        collection.find().toArray((err, result) => {
-            console.log("DDAAY LA REST")
-            console.log(result)
+
+        collection.find().sort({ "_id": -1 }).limit(1).toArray((err, result) => {
+           
             if (err) {
                 
                 console.log(err)
             } else {
                 if (result.length == 0) {
                     var Danh_sach_cuochop = {
-                        "tencuochop": Doi_tuong.tencuochop,
-                        "nhanvien": Doi_tuong.nhanvien,
-                        "timebatdau": Doi_tuong.timebatdau,
-                        "noidung": Doi_tuong.noidung,
-                        "nguoichutri": Doi_tuong.nguoichutri,
-                        "diadiem": Doi_tuong.diadiem,
-                        "ngayhop": Doi_tuong.ngayhop,
+                        "tencuochop": "Demo",
+                        "nhanvien": "ADMIN",
+                        "timebatdau": "Chưa cập nhật",
+                        "noidung": "Chưa cập nhật",
+                        "nguoichutri": "Chưa cập nhật",
+                        "diadiem": "Chưa cập nhật",
+                        "ngayhop": "Chưa cập nhật",
+                        "status": 2,
 
                         
                     }
@@ -55,6 +55,7 @@ function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
                         "nguoichutri": Doi_tuong.nguoichutri,
                         "diadiem": Doi_tuong.diadiem,
                         "ngayhop": Doi_tuong.ngayhop,
+                        "status": Doi_tuong.status,
                     }
                 }
                 collection.insertOne(Danh_sach_cuochop, function (err, result) {
