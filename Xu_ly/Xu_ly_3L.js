@@ -43,6 +43,7 @@ function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
                         "diadiem": "Chưa cập nhật",
                         "ngayhop": "Chưa cập nhật",
                         "status": 2,
+                       
 
                         
                     }
@@ -56,6 +57,7 @@ function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
                         "diadiem": Doi_tuong.diadiem,
                         "ngayhop": Doi_tuong.ngayhop,
                         "status": Doi_tuong.status,
+                       
                     }
                 }
                 collection.insertOne(Danh_sach_cuochop, function (err, result) {
