@@ -5,9 +5,7 @@ const MongoClient = require('mongodb').MongoClient;
 var Xu_ly_3L = require('./Xu_ly/Xu_ly_3L');
 var Dung_chung = require('./Xu_ly/Dung_chung');
 const uri = 'mongodb+srv://KIMITENLA:kimi1997@cluster0-f7nu1.gcp.mongodb.net/test?retryWrites=true&w=majority';
-var cors = require('cors')
 
-app.use(cors()) // Use this after the variable declaration
 //const uri = 'mongodb://localhost:27017/'
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
