@@ -35,6 +35,7 @@ function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
             } else {
                 if (result.length == 0) {
                     var Danh_sach_cuochop = {
+                        "status": 2,
                         "tencuochop": "Demo",
                         "nhanvien": "ADMIN",
                         "timebatdau": "Chưa cập nhật",
@@ -42,13 +43,14 @@ function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
                         "nguoichutri": "Chưa cập nhật",
                         "diadiem": "Chưa cập nhật",
                         "ngayhop": "Chưa cập nhật",
-                        "status": 2,
+                        
                        
 
                         
                     }
                 } else {
                     var Danh_sach_cuochop = {
+                        "status": Doi_tuong.status, 
                         "tencuochop": Doi_tuong.tencuochop,
                         "nhanvien": Doi_tuong.nhanvien,
                         "timebatdau": Doi_tuong.timebatdau,
@@ -56,7 +58,6 @@ function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
                         "nguoichutri": Doi_tuong.nguoichutri,
                         "diadiem": Doi_tuong.diadiem,
                         "ngayhop": Doi_tuong.ngayhop,
-                        "status": Doi_tuong.status,
                        
                     }
                 }
