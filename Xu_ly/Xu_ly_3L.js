@@ -18,10 +18,11 @@ function Doc_Danh_sach(Loai_Doi_tuong, db, client) {
 
 function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
     return new Promise(function (resolve, reject) {
-
+        console.log("Noi_dung_nhan trong xu ly 3l")
+            console.log(json.parse(Noi_dung_nhan))
         var database = client.db(db);
         var collection = database.collection(Loai_Doi_tuong);
-        let Doi_tuong = JSON.parse(Noi_dung_nhan);
+        let Doi_tuong = Noi_dung_nhan;
         let Ket_qua = {
             "Noi_dung": false,
 

@@ -78,7 +78,7 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
 
                 client.connect(uri => {
                     Xu_ly_3L.Register_cuoc_hop(collection, Noi_dung_Nhan, db, client).then(result => {
-
+                      
                         Dap_ung.writeHead(200, { "Content-Type": "Text/json; charset=utf-8" })
                         Dap_ung.end(JSON.stringify(result));
                     })
