@@ -1,6 +1,7 @@
 var Note_Dich_Vu = require('http');
 var Port = process.env.PORT || 5000;
-
+const express = require("express")
+const app = express();
 const MongoClient = require('mongodb').MongoClient;
 var Xu_ly_3L = require('./Xu_ly/Xu_ly_3L');
 var Dung_chung = require('./Xu_ly/Dung_chung');
