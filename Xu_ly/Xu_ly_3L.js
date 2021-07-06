@@ -23,7 +23,7 @@ function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
             console.log(Noi_dung_nhan,"123123111")
         var database = client.db(db);
         var collection = database.collection(Loai_Doi_tuong);
-        let Doi_tuong = Noi_dung_nhan;
+        let Doi_tuong = JSON.parse(Noi_dung_nhan);
         let Ket_qua = {
             "Noi_dung": false,
 
@@ -63,6 +63,7 @@ function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
                        
                     }
                 }
+                console.log(Danh_sach_cuochop,"Danh_sach_cuochop")
                 collection.insertOne(Danh_sach_cuochop, function (err, result) {
                     if (err) {
                     } else {
