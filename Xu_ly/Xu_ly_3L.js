@@ -19,7 +19,8 @@ function Doc_Danh_sach(Loai_Doi_tuong, db, client) {
 function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
     return new Promise(function (resolve, reject) {
         console.log("Noi_dung_nhan trong xu ly 3l")
-            console.log(json.parse(Noi_dung_nhan))
+            console.log(JSON.parse(Noi_dung_nhan))
+            console.log(Noi_dung_nhan,"123123111")
         var database = client.db(db);
         var collection = database.collection(Loai_Doi_tuong);
         let Doi_tuong = Noi_dung_nhan;
