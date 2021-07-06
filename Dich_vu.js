@@ -15,6 +15,7 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
     Dap_ung.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
     Dap_ung.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type')
     Dap_ung.setHeader('Access-Control-Allow-Credentials', true)
+    Dap_ung.setHeader('Access-Control-Allow-Origin: http://localhost:3000', true)
     let db = "Meeting"
 
 
