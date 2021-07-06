@@ -11,7 +11,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
     let method = Yeu_cau.method
     let url = Yeu_cau.url
-    Dap_ung.setHeader("Access-Control-Allow-Origin, *")
+    Dap_ung.setHeader("Access-Control-Allow-Origin", '*')
     Dap_ung.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
     Dap_ung.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type')
     Dap_ung.setHeader('Access-Control-Allow-Credentials', true)
