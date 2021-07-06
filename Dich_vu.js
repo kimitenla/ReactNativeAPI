@@ -18,9 +18,7 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
     Dap_ung.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
     Dap_ung.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type')
     Dap_ung.setHeader('Access-Control-Allow-Credentials', true)
-    if (Yeu_cau.method === 'OPTIONS') {
-        Dap_ung.status(200);
-    } next();
+  
     let db = "Meeting"
 
 
