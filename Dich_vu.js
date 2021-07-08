@@ -8,7 +8,7 @@ var Dung_chung = require('./Xu_ly/Dung_chung');
 const uri = 'mongodb+srv://KIMITENLA:kimi1997@cluster0-f7nu1.gcp.mongodb.net/test?retryWrites=true&w=majority';
 var cors = require('cors')
 
-app.use(cors()) 
+app.use(cors())
 //const uri = 'mongodb://localhost:27017/'
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
@@ -18,29 +18,30 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
     Dap_ung.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
     Dap_ung.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type')
     Dap_ung.setHeader('Access-Control-Allow-Credentials', true)
-  
+
     let db = "Meeting"
 
 
     if (method == "GET") {
 
         if (url == "/Thong_tin_cuoc_hop") {
-            let collection = "Thong_tin_cuoc_hop"
+            let collection = "Thong_tin_cuoc_hop"// n chỏ tới đây rồi chuyển qua bên kia xử lý
             client.connect(uri => {
                 Xu_ly_3L.Doc_Danh_sach(collection, db, client).then(result => {
                     result2 = []
                     result.forEach(element => {
 
                         result2.push(
-                            { "_id": element._id, 
-                            "tencuochop": element.tencuochop,
-                             "nhanvien": element.nhanvien, 
-                             "timebatdau": element.timebatdau,
-                              "noidung": element.noidung, 
-                              "nguoichutri": element.nguoichutri, 
-                              "diadiem": element.diadiem, 
-                              "ngayhop": element.ngayhop, 
-                             
+                            {
+                                "_id": element._id,
+                                "tencuochop": element.tencuochop,
+                                "nhanvien": element.nhanvien,
+                                "timebatdau": element.timebatdau,
+                                "noidung": element.noidung,
+                                "nguoichutri": element.nguoichutri,
+                                "diadiem": element.diadiem,
+                                "ngayhop": element.ngayhop,
+
                             }
                         )
                     })
@@ -49,11 +50,8 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
                 })
             })
 
-        } 
-    } 
-
-
-
+        }
+    }
     else {
 
         var Noi_dung_Nhan = '';
@@ -78,7 +76,7 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
 
                 client.connect(uri => {
                     Xu_ly_3L.Register_cuoc_hop(collection, Noi_dung_Nhan, db, client).then(result => {
-                      
+
                         Dap_ung.writeHead(200, { "Content-Type": "Text/json; charset=utf-8" })
                         Dap_ung.end(JSON.stringify(result));
                     })
@@ -86,8 +84,8 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
                 })
             })
 
-        } 
-        
+        }
+
 
 
     }
@@ -97,4 +95,4 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
 
 Dich_vu.listen(Port,
     console.log(`Service Run: http://localhost:${Port}`)
-)   
+)
