@@ -34,6 +34,7 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
                         result2.push(
                             {
                                 "_id": element._id,
+                                "status": element.status,
                                 "tencuochop": element.tencuochop,
                                 "nhanvien": element.nhanvien,
                                 "timebatdau": element.timebatdau,
