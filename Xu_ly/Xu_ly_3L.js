@@ -79,14 +79,14 @@ function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
 
 function update_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
     return new Promise(function (resolve, reject) {
-       
+        var ObjectID = require('mongodb').ObjectID; 
         var database = client.db(db);
         var collection = database.collection(Loai_Doi_tuong);
         console.log(Noi_dung_nhan)
         let Doi_tuong = JSON.parse(Noi_dung_nhan);
         let Ket_qua = { "Noi_dung": "Lỗi cập nhật" };
         let dk = {
-            "_id": Doi_tuong._id
+            "_id": Doi_tuong.ObjectID(_id)
         }
         let gt = {
             $set: { 
