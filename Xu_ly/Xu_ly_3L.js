@@ -87,7 +87,7 @@ function update_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
         let dk = {
             id: Doi_tuong._id
         }
-        
+        console.log(id,"day la id")
         let gt = {
             $set: { 
                         status: Doi_tuong.status, 
