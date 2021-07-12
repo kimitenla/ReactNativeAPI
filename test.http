@@ -15,9 +15,9 @@ content-type: application/json
   "status":0,
   "tencuochop":"asdsad",
   "nhanvien":42,
-   "timebatdau": "crm",
-  "noidung":0,
+  "timebatdau": "crm",
+  "noidung":435340,
   "nguoichutri":10,
-   "diadiem":10,
+  "diadiem":10,
   "ngayhop":42
 }
