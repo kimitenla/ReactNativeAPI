@@ -86,18 +86,18 @@ function update_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
         let Doi_tuong = JSON.parse(Noi_dung_nhan);
         let Ket_qua = { "Noi_dung": "Lỗi cập nhật" };
         let dk = {
-            "_id": Doi_tuong.ObjectID(_id)
+            _id: Doi_tuong.ObjectID(_id)
         }
         let gt = {
             $set: { 
-                        "status": Doi_tuong.status, 
-                        "tencuochop": Doi_tuong.tencuochop, 
-                        "nhanvien": Doi_tuong.nhanvien,
-                        "timebatdau": Doi_tuong.timebatdau, 
-                        "noidung": Doi_tuong.noidung,
-                        "nguoichutri": Doi_tuong.nguoichutri,
-                        "diadiem": Doi_tuong.diadiem, 
-                        "ngayhop": Doi_tuong.ngayhop, 
+                        status: Doi_tuong.status, 
+                        tencuochop: Doi_tuong.tencuochop, 
+                        nhanvien: Doi_tuong.nhanvien,
+                        timebatdau: Doi_tuong.timebatdau, 
+                        noidung: Doi_tuong.noidung,
+                        nguoichutri: Doi_tuong.nguoichutri,
+                        diadiem: Doi_tuong.diadiem, 
+                        ngayhop: Doi_tuong.ngayhop, 
                  }
         }
         collection.updateOne(dk, gt, (err, result) => {
