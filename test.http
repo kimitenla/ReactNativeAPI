@@ -13,7 +13,7 @@ content-type: application/json
 {
   "_id": "60dd8320ce04aaf4dcda9504",
   "status":0,
-  "tencuochop":10,
+  "tencuochop":"asdsad",
   "nhanvien":42,
    "timebatdau": "crm",
   "noidung":0,

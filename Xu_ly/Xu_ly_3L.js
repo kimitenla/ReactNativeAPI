@@ -90,14 +90,14 @@ function update_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
         }
         let gt = {
             $set: { 
-                        status: Doi_tuong.status, 
-                        tencuochop: Doi_tuong.tencuochop, 
-                        nhanvien: Doi_tuong.nhanvien,
-                        timebatdau: Doi_tuong.timebatdau, 
-                        noidung: Doi_tuong.noidung,
-                        nguoichutri: Doi_tuong.nguoichutri,
-                        diadiem: Doi_tuong.diadiem, 
-                        ngayhop: Doi_tuong.ngayhop, 
+                        "status": Doi_tuong.status, 
+                        "tencuochop": Doi_tuong.tencuochop, 
+                        "nhanvien": Doi_tuong.nhanvien,
+                        "timebatdau": Doi_tuong.timebatdau, 
+                        "noidung": Doi_tuong.noidung,
+                        "nguoichutri": Doi_tuong.nguoichutri,
+                        "diadiem": Doi_tuong.diadiem, 
+                        "ngayhop": Doi_tuong.ngayhop, 
                  }
         }
         collection.updateOne(dk, gt, (err, result) => {
