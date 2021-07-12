@@ -10,14 +10,14 @@ GET https://degrassi-inukshuk-77219.herokuapp.com/Thong_tin_cuoc_hop HTTP/1.1
 POST https://degrassi-inukshuk-77219.herokuapp.com/update_cuoc_hop HTTP/1.1
 content-type: application/json
 
-{   
-    id: "60dd8320ce04aaf4dcda9504", 
-    status: "test", 
-    tencuochop: "test", 
-    nhanvien: "test",
-    timebatdau: "test", 
-    noidung:" test",
-    nguoichutri: "test",
-    diadiem: "test", 
-    ngayhop: "test"
+{
+  "_id": "60dd8320ce04aaf4dcda9504",
+  "status":0,
+  "tencuochop":10,
+  "nhanvien":42,
+   "timebatdau": "crm",
+  "noidung":0,
+  "nguoichutri":10,
+   "diadiem":10,
+  "ngayhop":42
 }
