@@ -91,13 +91,13 @@ function update_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
         let gt = {
             $set: { 
                         status: Doi_tuong.status, 
-                        tencuochop: Doi_tuong.tencuochop, 
-                        nhanvien: Doi_tuong.nhanvien,
-                        timebatdau: Doi_tuong.timebatdau, 
-                        noidung: Doi_tuong.noidung,
-                        nguoichutri: Doi_tuong.nguoichutri,
-                        diadiem: Doi_tuong.diadiem, 
-                        ngayhop: Doi_tuong.ngayhop, 
+                        tencuochop: Doi_tuong.title, 
+                        nhanvien: Doi_tuong.user,
+                        timebatdau: Doi_tuong.timeString, 
+                        noidung: Doi_tuong.description,
+                        nguoichutri: Doi_tuong.userlead,
+                        diadiem: Doi_tuong.address, 
+                        ngayhop: Doi_tuong.dateString, 
                  }
         }
         collection.updateOne(dk, gt, (err, result) => {
