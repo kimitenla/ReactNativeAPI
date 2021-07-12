@@ -21,3 +21,12 @@ content-type: application/json
   "diadiem":10,
   "ngayhop":42
 }
+
+######## GHTK ROAD ############################
+
+DELETE  https://degrassi-inukshuk-77219.herokuapp.com/delete_cuoc_hop HTTP/1.1
+
+{
+  "_id": "60dd8320ce04aaf4dcda9504",
+}
+

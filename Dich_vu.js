@@ -86,6 +86,18 @@ var Dich_vu = Note_Dich_Vu.createServer((Yeu_cau, Dap_ung) => {
             })
 
         }
+        else if (url == "/delete_cuoc_hop") {
+            let collection = "Thong_tin_cuoc_hop"
+            Yeu_cau.on('end', function () {
+                client.connect(uri => {
+                  
+                    Xu_ly_3L.delete_cuoc_hop(collection, Noi_dung_Nhan, db, client).then(result => {
+                        Dap_ung.writeHead(200, { "Content-Type": "Text/json; charset=utf-8" })
+                        Dap_ung.end(JSON.stringify(result));
+                    })
+                })
+            })
+        }
 
 
 
