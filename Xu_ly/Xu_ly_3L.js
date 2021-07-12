@@ -86,7 +86,7 @@ function update_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
         let Doi_tuong = JSON.parse(Noi_dung_nhan);
         let Ket_qua = { "Noi_dung": "Lỗi cập nhật" };
         let dk = {
-            id: Doi_tuong._id
+            _id: Doi_tuong.id
         }
         console.log(id,"day la id")
         let gt = {
