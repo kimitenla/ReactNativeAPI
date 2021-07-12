@@ -20,5 +20,4 @@ content-type: application/json
     nguoichutri: "test",
     diadiem: "test", 
     ngayhop: "test"
-    
 }
