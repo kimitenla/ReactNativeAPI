@@ -28,6 +28,6 @@ DELETE  https://degrassi-inukshuk-77219.herokuapp.com/delete_cuoc_hop HTTP/1.1
 content-type: application/json
 
 {
-  "_id": "60dd8320ce04aaf4dcda9504"
+  "_id": "60e42e20c392730015dfa0e2"
 }
 
