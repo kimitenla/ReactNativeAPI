@@ -2,8 +2,7 @@ function Doc_Danh_sach(Loai_Doi_tuong, db, client) {
   return new Promise(function (resolve, reject) {
     var database = client.db(db);
     collection = database.collection(Loai_Doi_tuong);
-    collection.find({status : "2"})
-    .toArray(function (err, result) {
+    collection.find({}).toArray(function (err, result) {
       if (err) {
         reject(err);
       } else {
@@ -15,7 +14,7 @@ function Doc_Danh_sach(Loai_Doi_tuong, db, client) {
 
 function Register_cuoc_hop(Loai_Doi_tuong, Noi_dung_nhan, db, client) {
   return new Promise(function (resolve, reject) {
-    
+  
     var database = client.db(db);
     var collection = database.collection(Loai_Doi_tuong);
     let Doi_tuong = JSON.parse(Noi_dung_nhan);
